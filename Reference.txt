@@ -1,0 +1,8 @@
+Files Modified :
+/var/www/html/basic/vendor/webvimark/module-user-management/views/user/index.php
+/var/www/html/basic/vendor/webvimark/module-user-management/models/search/UserSearch.php
+/var/www/html/basic/vendor/webvimark/module-user-management/controllers/UserController.php
+
+
+File Added : 
+/var/www/html/basic/vendor/webvimark/module-user-management/models/rbacDB/Group.php
