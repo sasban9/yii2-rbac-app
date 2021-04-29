@@ -13,6 +13,7 @@ class Group extends AbstractItem
      */
     public static function getUserGroup($userId)
     {
+
         $dbManager = Yii::$app->authManager instanceof DbManager ? Yii::$app->authManager : new DbManager();
 
         return $dbManager->getGroupByUser($userId);

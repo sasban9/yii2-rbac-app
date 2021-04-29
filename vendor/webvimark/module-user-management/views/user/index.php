@@ -10,7 +10,6 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Pjax;
-
 /**
  * @var yii\web\View $this
  * @var yii\data\ActiveDataProvider $dataProvider
@@ -20,6 +19,10 @@ use yii\widgets\Pjax;
 
 $this->title = UserManagementModule::t('back', 'Users');
 $this->params['breadcrumbs'][] = $this->title;
+// echo '<pre>';
+// print_r($groupModel);
+// echo '</pre>';
+// die();
 
 ?>
 <div class="user-index">
@@ -49,7 +52,11 @@ $this->params['breadcrumbs'][] = $this->title;
 			<?php Pjax::begin([
     'id' => 'user-grid-pjax',
 ])?>
-
+<?php
+// echo "<pre>";
+// print_r($groupModel);
+// echo "</pre>";die();
+?>
 			<?=GridView::widget([
     'id' => 'user-grid',
     'dataProvider' => $dataProvider,
@@ -99,10 +106,20 @@ $this->params['breadcrumbs'][] = $this->title;
         [
             'attribute' => 'group_id',
             'format' => 'raw',
+            // 'filterModel' => $searchModel,
+            'value' => function (User $model) {
+                echo '<pre>5555555555555';
+                print_r($model);
+                echo '</pre>';
+                die();
+                return implode(', ', ArrayHelper::map($model->groups, 'name', 'group'));
+            },
+            'format' => 'raw',
         ],
         [
             'attribute' => 'gridRoleSearch',
             'value' => function (User $model) {
+
                 return implode(', ', ArrayHelper::map($model->roles, 'name', 'description'));
             },
             'format' => 'raw',

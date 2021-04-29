@@ -61,6 +61,7 @@ class DbManager extends BaseManager
      * @var string the name of the table storing rules. Defaults to "auth_rule".
      */
     public $ruleTable = '{{%auth_rule}}';
+    public $groupsTable = '{{%user_groups}}';
     /**
      * @var CacheInterface|array|string the cache used to improve RBAC performance. This can be one of the following:
      *
@@ -105,7 +106,6 @@ class DbManager extends BaseManager
      * @since `protected` since 2.0.38
      */
     protected $checkAccessAssignments = [];
-
 
     /**
      * Initializes the application component.
@@ -485,6 +485,29 @@ class DbManager extends BaseManager
         return $roles;
     }
 
+    /**
+     * {@inheritdoc}
+     * The roles returned by this method include the roles assigned via [[$defaultRoles]].
+     */
+    public function getGroupByUser($userId)
+    {
+        echo "Reached Here";die();
+        if ($this->isEmptyUserId($userId)) {
+            return [];
+        }
+
+        $query = (new Query())->select('b.*')
+            ->from(['a' => $this->assignmentTable, 'b' => $this->groupsTable])
+            ->where('{{a}}.[[group_id]]={{b}}.[[id]]')
+            ->andWhere(['a.user_id' => (string) $userId]);
+
+        $groups = [];
+        foreach ($query->all($this->db) as $row) {
+            $groups[$row['group_name']] = $this->populateItem($row);
+        }
+
+        return $groups;
+    }
     /**
      * {@inheritdoc}
      */
