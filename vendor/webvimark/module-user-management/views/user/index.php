@@ -23,33 +23,33 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-index">
 
-	<h2 class="lte-hide-title"><?= $this->title ?></h2>
+    <h2 class="lte-hide-title"><?= $this->title ?></h2>
 
-	<div class="panel panel-default">
-		<div class="panel-body">
+    <div class="panel panel-default">
+        <div class="panel-body">
 
-			<div class="row">
-				<div class="col-sm-6">
-					<p>
-						<?= GhostHtml::a(
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>
+                        <?= GhostHtml::a(
 							'<span class="glyphicon glyphicon-plus-sign"></span> ' . UserManagementModule::t('back', 'Create'),
 							['/user-management/user/create'],
 							['class' => 'btn btn-success']
 						) ?>
-					</p>
-				</div>
+                    </p>
+                </div>
 
-				<div class="col-sm-6 text-right">
-					<?= GridPageSize::widget(['pjaxId'=>'user-grid-pjax']) ?>
-				</div>
-			</div>
+                <div class="col-sm-6 text-right">
+                    <?= GridPageSize::widget(['pjaxId'=>'user-grid-pjax']) ?>
+                </div>
+            </div>
 
 
-			<?php Pjax::begin([
+            <?php Pjax::begin([
 				'id'=>'user-grid-pjax',
 			]) ?>
 
-			<?= GridView::widget([
+            <?= GridView::widget([
 				'id'=>'user-grid',
 				'dataProvider' => $dataProvider,
 				'pager'=>[
@@ -94,6 +94,10 @@ $this->params['breadcrumbs'][] = $this->title;
 						'class'=>'webvimark\components\StatusColumn',
 						'attribute'=>'email_confirmed',
 						'visible'=>User::hasPermission('viewUserEmail'),
+					],
+					[
+						'attribute' => 'group_id',
+						'format' => 'raw',
 					],
 					[
 						'attribute'=>'gridRoleSearch',
@@ -154,8 +158,8 @@ $this->params['breadcrumbs'][] = $this->title;
 				],
 			]); ?>
 
-			<?php Pjax::end() ?>
+            <?php Pjax::end() ?>
 
-		</div>
-	</div>
+        </div>
+    </div>
 </div>

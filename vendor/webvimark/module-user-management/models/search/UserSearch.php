@@ -35,6 +35,8 @@ class UserSearch extends User
 		if ( !Yii::$app->user->isSuperadmin )
 		{
 			$query->where(['superadmin'=>0]);
+            $currentUserGroupId = User::getCurrentUser()->group_id;
+            $query->andFilterWhere(['group_id' => $currentUserGroupId]);
 		}
 
 		$dataProvider = new ActiveDataProvider([
