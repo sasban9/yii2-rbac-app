@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '2.0.41',
-    'version' => '2.0.41.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'bd248c510c7cfefb602647ba35c568db41280914',
     'name' => 'yiisoft/yii2-app-basic',
   ),
   'versions' => 
@@ -217,6 +217,15 @@
       array (
       ),
       'reference' => 'dc960a912984efb74d0a90222870c72c87f10c91',
+    ),
+    'ikimea/browser' => 
+    array (
+      'pretty_version' => '1.12.0',
+      'version' => '1.12.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3fb8a2498ed36d49832d95f1da0c4cc055a64728',
     ),
     'myclabs/deep-copy' => 
     array (
@@ -736,6 +745,78 @@
       ),
       'reference' => '6964c76c7804814a842473e0c8fd15bab0f18e25',
     ),
+    'webvimark/bootstrap-switch' => 
+    array (
+      'pretty_version' => '1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c7493ba37747a83951cd95acf876668cbc0aba7f',
+    ),
+    'webvimark/components' => 
+    array (
+      'pretty_version' => '1.0.3',
+      'version' => '1.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '805b7ecfaea1654a8c0f47bc007497c97bdc9613',
+    ),
+    'webvimark/date-range-picker' => 
+    array (
+      'pretty_version' => '1.0.2',
+      'version' => '1.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '195826787e1e516cb101a5a5720ffa42f3255210',
+    ),
+    'webvimark/grid-bulk-actions' => 
+    array (
+      'pretty_version' => '1.0.2',
+      'version' => '1.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c15cc98cc926a4ec0537a08d12ed25208c024440',
+    ),
+    'webvimark/grid-page-size' => 
+    array (
+      'pretty_version' => '1.0.2',
+      'version' => '1.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'cb0163614e34ebb0319ef436da6db755f30546d2',
+    ),
+    'webvimark/helpers' => 
+    array (
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '7bb59438d50149cec8233f3b509dd686200ea567',
+    ),
+    'webvimark/image' => 
+    array (
+      'pretty_version' => '1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '18a3f257b55d0670086b4ccdac005fe376ad7c21',
+    ),
+    'webvimark/module-user-management' => 
+    array (
+      'pretty_version' => '1.0.13',
+      'version' => '1.0.13.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '48adb6cc53fc0a7da34dbf31bba47a0ef8d35cd8',
+    ),
     'yiisoft/yii2' => 
     array (
       'pretty_version' => '2.0.41.1',
@@ -747,12 +828,12 @@
     ),
     'yiisoft/yii2-app-basic' => 
     array (
-      'pretty_version' => '2.0.41',
-      'version' => '2.0.41.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'bd248c510c7cfefb602647ba35c568db41280914',
     ),
     'yiisoft/yii2-bootstrap' => 
     array (
