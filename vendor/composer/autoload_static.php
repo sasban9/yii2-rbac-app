@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit2321cfb42d8187a8521744a0c77af98c
+class ComposerStaticInit7a4722cebc7c09fe1aa75fec26530282
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -14,13 +14,13 @@ class ComposerStaticInit2321cfb42d8187a8521744a0c77af98c
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
-        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
-        '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
+        '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
@@ -37,17 +37,6 @@ class ComposerStaticInit2321cfb42d8187a8521744a0c77af98c
             'yii\\composer\\' => 13,
             'yii\\bootstrap\\' => 14,
             'yii\\' => 4,
-        ),
-        'w' => 
-        array (
-            'webvimark\\modules\\UserManagement\\' => 33,
-            'webvimark\\image\\' => 16,
-            'webvimark\\helpers\\' => 18,
-            'webvimark\\extensions\\GridPageSize\\' => 34,
-            'webvimark\\extensions\\GridBulkActions\\' => 37,
-            'webvimark\\extensions\\DateRangePicker\\' => 37,
-            'webvimark\\extensions\\BootstrapSwitch\\' => 37,
-            'webvimark\\components\\' => 21,
         ),
         'p' => 
         array (
@@ -149,43 +138,11 @@ class ComposerStaticInit2321cfb42d8187a8521744a0c77af98c
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
         ),
-        'webvimark\\modules\\UserManagement\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/webvimark/module-user-management',
-        ),
-        'webvimark\\image\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/webvimark/image',
-        ),
-        'webvimark\\helpers\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/webvimark/helpers',
-        ),
-        'webvimark\\extensions\\GridPageSize\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/webvimark/grid-page-size',
-        ),
-        'webvimark\\extensions\\GridBulkActions\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/webvimark/grid-bulk-actions',
-        ),
-        'webvimark\\extensions\\DateRangePicker\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/webvimark/date-range-picker',
-        ),
-        'webvimark\\extensions\\BootstrapSwitch\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/webvimark/bootstrap-switch',
-        ),
-        'webvimark\\components\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/webvimark/components',
-        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
         ),
         'cebe\\markdown\\' => 
         array (
@@ -325,20 +282,13 @@ class ComposerStaticInit2321cfb42d8187a8521744a0c77af98c
         ),
         'Codeception\\' => 
         array (
-            0 => __DIR__ . '/..' . '/codeception/codeception/src/Codeception',
-            1 => __DIR__ . '/..' . '/codeception/stub/src',
+            0 => __DIR__ . '/..' . '/codeception/stub/src',
+            1 => __DIR__ . '/..' . '/codeception/codeception/src/Codeception',
             2 => __DIR__ . '/..' . '/codeception/verify/src/Codeception',
         ),
     );
 
     public static $prefixesPsr0 = array (
-        'I' => 
-        array (
-            'Ikimea\\Browser\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/ikimea/browser/lib',
-            ),
-        ),
         'H' => 
         array (
             'HTMLPurifier' => 
@@ -979,10 +929,10 @@ class ComposerStaticInit2321cfb42d8187a8521744a0c77af98c
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit2321cfb42d8187a8521744a0c77af98c::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit2321cfb42d8187a8521744a0c77af98c::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit2321cfb42d8187a8521744a0c77af98c::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit2321cfb42d8187a8521744a0c77af98c::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit7a4722cebc7c09fe1aa75fec26530282::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit7a4722cebc7c09fe1aa75fec26530282::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit7a4722cebc7c09fe1aa75fec26530282::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit7a4722cebc7c09fe1aa75fec26530282::$classMap;
 
         }, null, ClassLoader::class);
     }
