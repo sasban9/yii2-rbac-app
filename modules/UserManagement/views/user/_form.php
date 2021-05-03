@@ -20,6 +20,7 @@ use webvimark\extensions\BootstrapSwitch\BootstrapSwitch;
 		'layout'=>'horizontal',
 		'validateOnBlur' => false,
 	]); ?>
+    <?= $form->field($model, 'group_id')->hiddenInput(['value'=>Yii::$app->user->identity->group_id])->label(false); ?>
 
 	<?= $form->field($model->loadDefaultValues(), 'status')
 		->dropDownList(User::getStatusList()) ?>

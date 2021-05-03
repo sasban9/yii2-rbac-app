@@ -2,7 +2,7 @@
 
 use webvimark\modules\UserManagement\components\GhostHtml;
 use webvimark\modules\UserManagement\models\rbacDB\Role;
-use webvimark\modules\UserManagement\models\User;
+use app\modules\UserManagement\models\User;
 use webvimark\modules\UserManagement\UserManagementModule;
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
@@ -11,6 +11,7 @@ use yii\widgets\Pjax;
 use webvimark\extensions\GridBulkActions\GridBulkActions;
 use webvimark\extensions\GridPageSize\GridPageSize;
 use yii\grid\GridView;
+use app\modules\UserManagement\models\UserGroups;
 
 /**
  * @var yii\web\View $this
@@ -97,8 +98,15 @@ $this->params['breadcrumbs'][] = $this->title;
 						'visible'=>User::hasPermission('viewUserEmail'),
 					],
 					[
-						'attribute' => 'group_id',
-						'format' => 'raw',
+						'attribute'=>'group_id', 
+						'filter'=>ArrayHelper::map(UserGroups::getAvailableGroups(Yii::$app->user->isSuperAdmin),'name', 'description'),
+						'value'=>function(User $model){
+						 
+								return implode(', ', ArrayHelper::map($model->groups, 'name', 'group_name'));
+							},
+						'format'=>'raw', 
+						'visible'=>User::hasPermission('ViewUserGroup'),
+						
 					],
 					[
 						'attribute'=>'gridRoleSearch',
