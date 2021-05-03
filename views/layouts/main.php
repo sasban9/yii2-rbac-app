@@ -10,7 +10,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use webvimark\modules\UserManagement\components\GhostNav;
-use webvimark\modules\UserManagement\UserManagementModule;
+use app\modules\UserManagement\UserManagementModule;
 
 AppAsset::register($this);
 ?>
