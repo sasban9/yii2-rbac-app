@@ -1,6 +1,6 @@
 <?php
 
-namespace webvimark\modules\UserManagement\models\search;
+namespace app\modules\UserManagement\models\search;
 
 use Yii;
 use yii\base\Model;
@@ -10,22 +10,8 @@ use webvimark\modules\UserManagement\models\User;
 /**
  * UserSearch represents the model behind the search form about `webvimark\modules\UserManagement\models\User`.
  */
-class UserSearch extends User
+class UserSearch extends webvimark\modules\UserManagement\models\search\UserSearch
 {
-	public function rules()
-	{
-		return [
-			[['id', 'superadmin', 'status', 'created_at', 'updated_at', 'email_confirmed'], 'integer'],
-			[['username', 'gridRoleSearch', 'registration_ip', 'email'], 'string'],
-		];
-	}
-
-	public function scenarios()
-	{
-		// bypass scenarios() implementation in the parent class
-		return Model::scenarios();
-	}
-
 	public function search($params)
 	{
 		$query = User::find();
@@ -35,8 +21,8 @@ class UserSearch extends User
 		if ( !Yii::$app->user->isSuperadmin )
 		{
 			$query->where(['superadmin'=>0]);
-            // $currentUserGroupId = User::getCurrentUser()->group_id;
-            // $query->andFilterWhere(['group_id' => $currentUserGroupId]);
+            $currentUserGroupId = User::getCurrentUser()->group_id;
+            $query->andFilterWhere(['group_id' => $currentUserGroupId]);
 		}
 
 		$dataProvider = new ActiveDataProvider([
