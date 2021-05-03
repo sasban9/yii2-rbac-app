@@ -38,6 +38,10 @@ $config = [
         ],
     ],
     'components' => [
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'RhcBnWhXTT0kxlpxTuVWY8DwI5DBVWux',
