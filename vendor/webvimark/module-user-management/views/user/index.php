@@ -97,10 +97,6 @@ $this->params['breadcrumbs'][] = $this->title;
 						'visible'=>User::hasPermission('viewUserEmail'),
 					],
 					[
-						'attribute' => 'group_id',
-						'format' => 'raw',
-					],
-					[
 						'attribute'=>'gridRoleSearch',
 						'filter'=>ArrayHelper::map(Role::getAvailableRoles(Yii::$app->user->isSuperAdmin),'name', 'description'),
 						'value'=>function(User $model){
