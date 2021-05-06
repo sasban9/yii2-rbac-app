@@ -41,6 +41,7 @@ class UserManagementModule extends \webvimark\modules\UserManagement\UserManagem
 			['label' => '<i class="fa fa-angle-double-right"></i> ' . UserManagementModule::t('back', 'Roles'), 'url' => ['/user-management/role/index']],
 			['label' => '<i class="fa fa-angle-double-right"></i> ' . UserManagementModule::t('back', 'Permissions'), 'url' => ['/user-management/permission/index']],
 			['label' => '<i class="fa fa-angle-double-right"></i> ' . UserManagementModule::t('back', 'Permission groups'), 'url' => ['/user-management/auth-item-group/index']],
+			['label' => '<i class="fa fa-angle-double-right"></i> ' . UserManagementModule::t('back', 'Events'), 'url' => ['/user-management/events/index']],
 			['label' => '<i class="fa fa-angle-double-right"></i> ' . UserManagementModule::t('back', 'Visit log'), 'url' => ['/user-management/user-visit-log/index']],
 		]; 
 	}
