@@ -2,6 +2,8 @@
 
 namespace app\models;
 
+use webvimark\helpers\Singleton;
+
 class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
 {
     public $id;
@@ -9,8 +11,34 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
     public $password;
     public $authKey;
     public $accessToken;
+    
+    /**
+	 * Store result in singleton to prevent multiple db requests with multiple calls
+	 *
+	 * @param bool $fromSingleton
+	 *
+	 * @return static
+	 */
+	public static function getCurrentUser($fromSingleton = true)
+	{
+		if ( !$fromSingleton )
+		{
+			return static::findOne(Yii::$app->user->id);
+		}
 
-    private static $users = [
+		$user = Singleton::getData('__currentUser');
+
+		if ( !$user )
+		{
+			$user = static::findOne(Yii::$app->user->id);
+
+			Singleton::setData('__currentUser', $user);
+		}
+
+		return $user;
+	}
+
+    private static $userss = [
         '100' => [
             'id' => '100',
             'username' => 'admin',
